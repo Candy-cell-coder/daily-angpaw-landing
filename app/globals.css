@@ -55,6 +55,35 @@ body {
   padding-inline: 20px;
 }
 
+/* ---------- Falling angpao (festive full-page overlay) ---------- */
+.angpao-rain {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 4;
+}
+.angpao-rain span {
+  position: absolute;
+  top: -8%;
+  will-change: transform;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.35));
+  animation-name: angpao-fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes angpao-fall {
+  0% {
+    transform: translateY(-12vh) rotate(-8deg);
+  }
+  50% {
+    transform: translateY(50vh) rotate(10deg);
+  }
+  100% {
+    transform: translateY(114vh) rotate(-6deg);
+  }
+}
+
 /* ---------- Section rhythm ---------- */
 .section {
   padding-block: 56px;

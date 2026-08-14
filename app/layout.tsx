@@ -3,6 +3,7 @@ import { Analytics } from '@vercel/analytics/next';
 import './globals.css';
 import MetaPixel from '@/components/MetaPixel';
 import AnalyticsInit from '@/components/AnalyticsInit';
+import FallingAngpao from '@/components/FallingAngpao';
 
 export const metadata: Metadata = {
   title: 'Daily Angpaw Community — Daily Rewards, Events & Updates',
@@ -30,6 +31,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <MetaPixel />
         {/* Captures campaign/UTM params + fires page_view on mount. */}
         <AnalyticsInit />
+        {/* Festive falling red packets across the whole page. */}
+        <FallingAngpao />
         {children}
         {/* Vercel Web Analytics — page views + our custom button-click events.
             Shows up in your Vercel project's "Analytics" tab once deployed.
