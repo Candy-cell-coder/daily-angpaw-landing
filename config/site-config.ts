@@ -9,11 +9,19 @@
  */
 
 export interface RewardImage {
-  /** Path under /public, e.g. "/rewards/reward-1.jpg" */
+  /** Full image URL (served from a CDN) */
   src: string;
   /** Alt text for accessibility + SEO */
   alt: string;
 }
+
+/**
+ * Reward screenshots are served from the public repo via the free jsDelivr CDN.
+ * (The direct-file Vercel deploy can't carry binary images, so we host them here.)
+ * The source files also live in /public/rewards for local reference.
+ */
+const REWARD_CDN =
+  'https://cdn.jsdelivr.net/gh/Candy-cell-coder/daily-angpaw-landing@master/public/rewards';
 
 export const siteConfig = {
   /** Brand / copy */
@@ -43,12 +51,12 @@ export const siteConfig = {
    * just drop files into /public/rewards and update this list.
    */
   rewardImages: [
-    { src: '/rewards/reward-1.jpg', alt: 'Daily Angpaw community reward payouts' },
-    { src: '/rewards/reward-2.jpg', alt: 'Community reward leaderboard — 202 of 600 members' },
-    { src: '/rewards/reward-3.jpg', alt: 'RM20.84 community reward payout' },
-    { src: '/rewards/reward-4.jpg', alt: 'Top community reward winners leaderboard' },
-    { src: '/rewards/reward-5.jpg', alt: 'Multiple RM10 reward payouts to community members' },
-    { src: '/rewards/reward-6.jpg', alt: 'Daily reward credited to a member wallet' },
+    { src: `${REWARD_CDN}/reward-1.jpg`, alt: 'Daily Angpaw community reward payouts' },
+    { src: `${REWARD_CDN}/reward-2.jpg`, alt: 'Community reward leaderboard — 202 of 600 members' },
+    { src: `${REWARD_CDN}/reward-3.jpg`, alt: 'RM20.84 community reward payout' },
+    { src: `${REWARD_CDN}/reward-4.jpg`, alt: 'Top community reward winners leaderboard' },
+    { src: `${REWARD_CDN}/reward-5.jpg`, alt: 'Multiple RM10 reward payouts to community members' },
+    { src: `${REWARD_CDN}/reward-6.jpg`, alt: 'Daily reward credited to a member wallet' },
   ] as RewardImage[],
 } as const;
 
