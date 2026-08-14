@@ -410,11 +410,6 @@ body {
   .cta {
     transition: none;
   }
-  /* Stop the auto-scroll for users who prefer less motion, keep it swipeable. */
-  .gallery {
-    overflow-x: auto;
-  }
-  .gallery__track {
-    animation: none;
-  }
+  /* Note: the reward marquee keeps auto-scrolling on purpose (it's a core
+     visual for this campaign page) — a gentle horizontal loop, no flashing. */
 }
