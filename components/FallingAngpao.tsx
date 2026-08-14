@@ -7,24 +7,17 @@
  */
 
 // Fixed, hand-tuned set so the fall looks natural (no randomness needed).
-// l = left %, s = size px, d = fall duration s, delay = start delay s, o = opacity
+// Small, sparse, medium speed. l = left %, s = size px, d = fall duration s,
+// delay = start delay s, o = opacity.
 const PACKETS = [
-  { l: 4, s: 18, d: 13, delay: 0, o: 0.5 },
-  { l: 12, s: 24, d: 16, delay: 2.5, o: 0.55 },
-  { l: 20, s: 14, d: 11, delay: 5, o: 0.4 },
-  { l: 28, s: 20, d: 15, delay: 1.2, o: 0.5 },
-  { l: 36, s: 16, d: 12, delay: 3.8, o: 0.45 },
-  { l: 44, s: 26, d: 18, delay: 6.2, o: 0.55 },
-  { l: 52, s: 15, d: 10, delay: 0.8, o: 0.4 },
-  { l: 60, s: 22, d: 14, delay: 4.5, o: 0.5 },
-  { l: 68, s: 18, d: 13, delay: 2, o: 0.5 },
-  { l: 76, s: 25, d: 17, delay: 5.6, o: 0.55 },
-  { l: 84, s: 14, d: 11, delay: 1.6, o: 0.4 },
-  { l: 92, s: 20, d: 15, delay: 3.2, o: 0.5 },
-  { l: 16, s: 16, d: 12, delay: 7, o: 0.45 },
-  { l: 48, s: 19, d: 16, delay: 8.5, o: 0.5 },
-  { l: 72, s: 15, d: 12, delay: 6.8, o: 0.4 },
-  { l: 88, s: 22, d: 14, delay: 9.2, o: 0.5 },
+  { l: 8, s: 12, d: 12, delay: 0, o: 0.5 },
+  { l: 22, s: 15, d: 13, delay: 3, o: 0.5 },
+  { l: 37, s: 11, d: 12.5, delay: 6.5, o: 0.45 },
+  { l: 50, s: 14, d: 11.5, delay: 1.8, o: 0.5 },
+  { l: 64, s: 12, d: 13.5, delay: 4.8, o: 0.45 },
+  { l: 78, s: 16, d: 12, delay: 8, o: 0.5 },
+  { l: 91, s: 11, d: 13, delay: 2.4, o: 0.45 },
+  { l: 45, s: 13, d: 14, delay: 9.5, o: 0.45 },
 ];
 
 export default function FallingAngpao() {
